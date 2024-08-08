@@ -1,0 +1,165 @@
+/**
+ * @package 	WordPress
+ * @subpackage 	Medical Clinic
+ * @version 	1.3.2
+ */
+ 
+-----------------------------------------------------------------------
+				CHANGELOG
+-----------------------------------------------------------------------
+Version 1.3.2:
+	
+	1. Fixed WooCommerce dynamic cart
+	2. Updated WooCommerce template
+	3. Updated plugins
+--------------------------------------
+Version 1.3.1:
+
+	1. Fixed tribe event series
+	2. Updated plugins
+--------------------------------------
+Version 1.3.0:
+
+	1. Fix for webp format in jQuery iLightBox
+	2. Fixed custom fonts in gutenberg editor.
+	3. Fixed fatal error on PHP 8
+	4. Updated Woocommerce templates
+	5. Updated plugins
+	6. Updated translates
+--------------------------------------
+Version 1.2.9:
+
+	1. Update Plugins
+--------------------------------------
+Version 1.2.8:
+
+	1. Fixed pingbacks & trackbacks.
+	2. Fixed twitter connection.
+	3. Update Plugins
+	4. Updated translates
+--------------------------------------
+Version 1.2.7:
+
+	1. Update Plugins
+--------------------------------------
+Version 1.2.6:
+
+	1. Fixed hover slider script
+	2. Fixed behavior section setting for Posts Slider, Pricing Table and Gallery shortcodes.
+	3. Update Plugins
+--------------------------------------
+Version 1.2.5:
+	
+	1. Update Plugins
+	2. Update Translate
+	3. Fixed demo content
+--------------------------------------
+Version 1.2.4:
+
+	1. Fixed jQuery Migrate notices
+	2. Update iLightbox
+	3. Added deprecated function for Flickr widget
+	4. Fixed isotope
+	5. Update Plugins
+	6. Update Translate
+--------------------------------------
+Version 1.2.3:
+
+	1. revslider 6.3.3
+	2. CC update
+--------------------------------------
+Version 1.2.2:
+
+	1. revslider 6.3.2
+	2. Timetable 6.4 CC button fix
+	3. WP 5.6 columns fix
+	4. WP 5.6 drag'n'drop fix
+	5. WP 5.6 pop-up fix
+	6. Update LightBox isotope
+	7. WP 5.6 import demo content fix
+--------------------------------------
+Version 1.2.1:
+
+	1. Update isotope
+	5. RevSlider 6.2.23
+	6. Timetable 6.4
+--------------------------------------
+Version 1.2.0:
+
+	1. Gutenberg styles fix
+	2. Update Woocommerce 4.4.1
+	3. Envato theme check fix
+	4. Fix for span tag
+	5. Yoast SEO breadcrumbs fix
+	6. Timetable slug fix
+	7. Shop sidebar fix
+	8. Classic Editor fix
+	9. PHP 7.4 implode fix
+	10. Gutenberg 8.9.2 notices and CC button fixes
+	11. Update plugins
+--------------------------------------
+Version 1.1.9:
+
+	1. WP 5.5 Color Picker fix
+	2. Removed Form Builder plugin
+--------------------------------------
+Version 1.1.8:
+
+	1. Fix TGMPA
+	2. Update Woocommerce 3.8.0
+	3. Update plugins
+--------------------------------------
+Version 1.1.7:
+
+	1. Add into Theme Settings checkbox, Header Woocommerce Cart
+	2. Logo 2x(retina) must has width as 1x (no retina)
+	3. Update Woocommerce 3.6.0
+	4. Update plugins
+--------------------------------------
+Version 1.1.6:
+
+	1. Update for WP 5 ( Gutenberg )
+	2. Add One Click Demo Import Plugin
+	3. Update plugins
+	4. Update Woo 3.5.2
+	5. Fix for Envato Theme Check 
+	6. Fix Timetable 5.7
+--------------------------------------
+Version 1.1.5:
+	
+	1. Fix for rows in terms and conditions (checkout page)
+	2. Fix for booking popup message
+	3. Fix styles for checkout coupon button
+	4. Fix _title_nolink function
+	5. Nothing display unless a menu location is set
+	6. escaping data (echo $)
+	7. warning for $_SERVER['HTTP_USER_AGENT'], replace to getenv
+	8. warning for force_balance_tags
+	9. Fix Woocommerce Store Notice.
+	10. Fix for cmsmasters_rgba2rgb function
+	11. Fix colors for autofill fields
+	12. Disabled hover for button[disabled]
+	13. Small style fixes, replace image-rendering for small images
+	14. Fix width and height for logo retina (for validator)
+	15. Add theme-vars folder
+	16. Fix for prev next posts function (if order by categories)
+	17. Added cursor pointer to select
+	18. Changed default select arrow image
+	19. Fixed adaptive gallery-columns
+	20. Fixed adaptive archive title
+	21. Fix margin for ul and ol in Comments
+	22. add functional "Sticky Сolumn"
+	23. Update Woo
+	24. Update comments (add cookies checkbox)
+	25. Add privacy policy link to footer
+	26. Add Cookie Notice plugin to plugin activator
+	27. Update for MailPoet 3
+	28. Fix order details for variable product
+	29. Fix sitemap page (Changed from "No categories" by default in WP to "No tags")
+	30. Checkout coupon description fix
+	31. Fix headline background attachment for touch device
+	32. Fix for subpage navigation items
+	33. Fix for iLightbox in load more gallery
+	34. Remove library that are already pre-packaged with WordPress
+	35. Included library imagesloaded instead
+--------------------------------------
