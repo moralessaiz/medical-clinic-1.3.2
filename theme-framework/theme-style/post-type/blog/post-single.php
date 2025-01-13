@@ -101,6 +101,13 @@ $cmsmasters_post_more_posts = get_post_meta(get_the_ID(), 'cmsmasters_post_more_
 		echo '<div class="cmsmasters_post_content entry-content">';
 			
 			the_content();
+			// MODIFICADO -> Para que aparezca campo personalizado de autores y poder implementarlo en el repositorio de investigación y el repositorio de incubadora de Gestión del Conocimiento
+			// Comprobar si el campo personalizado 'autores' está presente
+			if ( get_post_meta( get_the_ID(), 'autores', true ) ) {
+				echo '<div class="post-autores">';
+				echo '<strong>Autores:</strong> ' . esc_html( get_post_meta( get_the_ID(), 'autores', true ) );
+				echo '</div>';
+			}
 			
 			
 			wp_link_pages(array( 

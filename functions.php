@@ -462,3 +462,68 @@ function medical_clinic_run_reinit_import_options($post_id, $key, $value) {
 }
 
 add_action('import_post_meta', 'medical_clinic_run_reinit_import_options', 10, 3);
+
+// MODIFICADO -> Remover del menú de Rol: comunicaciones
+function custom_menu_modifications_comunicaciones() {
+    // Obtener el usuario actual
+    $user = wp_get_current_user();
+
+    // Condiciones para un rol específico, por ejemplo 'editor'
+    if (in_array('comunicaciones', $user->roles)) {
+        // Remover menús específicos
+        remove_menu_page('tools.php');  // Herramientas
+        remove_menu_page('edit-comments.php');  // Comentarios
+        remove_menu_page('plugins.php');  // Plugins
+		remove_menu_page('options-general.php');
+		remove_menu_page('elementor');
+		remove_menu_page('WP-Optimize');
+		remove_menu_page('cmsmasters-settings');
+		remove_menu_page('accessibility-settings');
+		remove_menu_page('unlimitedelements');
+		remove_menu_page('cmtt_menu_options');
+		remove_menu_page('embedpress');
+		remove_menu_page('eael-settings');
+		remove_menu_page('cookie-law-info');
+		remove_menu_page('edit.php?post_type=calendar');
+		remove_menu_page('edit.php?post_type=profile');
+		remove_menu_page('edit.php?post_type=project');
+		remove_menu_page('edit.php?post_type=elementor_library');
+		remove_menu_page('edit.php?post_type=docs-investigacion');
+		remove_menu_page('cptui_main_menu');
+		remove_menu_page('searchandfilter-settings');
+
+        // Si quieres modificar otros menús, puedes usar:
+        // remove_submenu_page('slug-del-menu-padre', 'slug-del-submenu');
+    }
+}
+add_action('admin_menu', 'custom_menu_modifications_comunicaciones', 99);
+
+// MODIFICADO -> Incluir widgets.js de Twitter directamente en el template
+function add_twitter_widgets_js() {
+    // Incluir el script widgets.js de Twitter
+    wp_enqueue_script(
+        'twitter-widgets', // Nombre del script
+        'https://platform.twitter.com/widgets.js', // URL del script
+        array(), // Dependencias
+        null, // Versión
+        true // Cargar en el footer para mejor rendimiento
+    );
+}
+add_action('wp_enqueue_scripts', 'add_twitter_widgets_js');
+
+// MODIFICADO para gargar jQuery en tema o plugin
+function enqueue_jquery_on_login() {
+    if (!is_admin()) {
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('login_enqueue_scripts', 'enqueue_jquery_on_login');
+
+// MODIFICADO -> imprimir todos los slugs en la pagina de administrador index.php
+/*function list_all_menu_slugs() {
+    global $menu;
+    echo '<pre>';
+    print_r($menu);
+    echo '</pre>';
+}
+add_action('admin_menu', 'list_all_menu_slugs'); */

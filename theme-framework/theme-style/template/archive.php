@@ -67,7 +67,7 @@ $cmsmasters_project_link_target = get_post_meta(get_the_ID(), 'cmsmasters_projec
 				wpautop(medical_clinic_excerpt(55, false)) . 
 			'</div>' . "\n");
 		}
-		
+
 		
 		if (get_post_type() == 'post' || $current_tax != '') {
 			echo '<footer class="cmsmasters_archive_item_info entry-meta">';
