@@ -26,13 +26,13 @@ echo '<div class="header_mid" data-height="' . esc_attr($cmsmasters_option['medi
 			echo '</div>'.
 			'<div class="titulo_subred_sur col col-sm-8" alt="Titulo Subred Integrada de Servicios de Salud Sur E.S.E." title="Titulo Subred Integrada de Servicios de Salud Sur E.S.E.">'.
 				'<a href="/home/">'.
-					'<img class="imagen_titulo_subred_sur" src="/wp-content/uploads/2023/08/titulo_subred_sur.png">'.
+					'<img class="imagen_titulo_subred_sur" src="/wp-content/uploads/2023/08/titulo_subred_sur.png" alt="Titulo Pagina Web Subred Sur" title="Titulo Pagina Web Subred Sur" />'.
 				/* '<h1>SUBRED INTEGRADA DE</h1>'.
 				'<h1>SERVICIOS DE SALUD SUR E.S.E.</h1>' . */
 			'</div>'.
 			'<div class="logo_compuesto col col-sm-2">' .
 				'<a href="http://www.saludcapital.gov.co/Paginas2/Inicio.aspx" target="_blank">' .
-					'<img width="300" height="300" src="/wp-content/uploads/2023/05/logo-bogota-compuesto.png" alt="Logo secretaría de salud" title="Logo secretaría de salud">'.
+					'<img width="300" height="300" src="/wp-content/uploads/2023/05/logo-bogota-compuesto.png" alt="Logo secretaría de salud" title="Logo secretaría de salud" />'.
 				'</a>' .
 			'</div>';
 			

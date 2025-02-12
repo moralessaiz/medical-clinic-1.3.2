@@ -9,6 +9,7 @@
  * 
  */
 
+ add_filter('https_ssl_verify', '__return_false');
 
 /*** START EDIT THEME PARAMETERS HERE ***/
 // Theme Settings System Fonts List
@@ -527,3 +528,43 @@ add_action('login_enqueue_scripts', 'enqueue_jquery_on_login');
     echo '</pre>';
 }
 add_action('admin_menu', 'list_all_menu_slugs'); */
+
+/* Eliminar metaetiquetas (version de wordpress) en código fuente de las páginas */
+remove_action('wp_head', 'wp_generator');
+
+add_filter('http_request_args', function($args, $url) {
+    if (strpos($url, 'http://downloads.wordpress.org') === 0) {
+        $url = str_replace('http://', 'https://', $url);
+    }
+    return $args;
+}, 10, 2);
+
+
+/* add_filter('rest_authentication_errors', function($result) {
+    return is_wp_error($result) ? $result : null;
+}); */
+
+/* interceptar solicitudes HTTP y las cambia a HTTPS antes de que se realicen */
+function force_https_urls( $args, $url ) {
+    if (strpos($url, 'http://') === 0) {
+        $url = str_replace('http://', 'https://', $url);
+    }
+    return $args;
+}
+add_filter('http_request_args', 'force_https_urls', 10, 2);
+
+/* Probar conexion exterior en el archivo debug.log */
+function test_http_connection() {
+    $response = wp_remote_get( 'https://api.wordpress.org/plugins/info/1.0/' );
+    if ( is_wp_error( $response ) ) {
+        error_log( 'Error de conexión: ' . $response->get_error_message() );
+    } else {
+        error_log( 'Conexión exitosa a wordpress.org' );
+    }
+}
+add_action('admin_init', 'test_http_connection');
+
+/* Retrasar la carga de codigo despues del init */
+add_action('init', function() {
+    load_theme_textdomain('medical-clinic', get_template_directory() . '/languages');
+});
