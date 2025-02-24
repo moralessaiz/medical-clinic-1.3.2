@@ -9,7 +9,7 @@
  * 
  */
 
- add_filter('https_ssl_verify', '__return_false');
+ //add_filter('https_ssl_verify', '__return_false');
 
 /*** START EDIT THEME PARAMETERS HERE ***/
 // Theme Settings System Fonts List
@@ -531,18 +531,6 @@ add_action('admin_menu', 'list_all_menu_slugs'); */
 
 /* Eliminar metaetiquetas (version de wordpress) en código fuente de las páginas */
 remove_action('wp_head', 'wp_generator');
-
-add_filter('http_request_args', function($args, $url) {
-    if (strpos($url, 'http://downloads.wordpress.org') === 0) {
-        $url = str_replace('http://', 'https://', $url);
-    }
-    return $args;
-}, 10, 2);
-
-
-/* add_filter('rest_authentication_errors', function($result) {
-    return is_wp_error($result) ? $result : null;
-}); */
 
 /* interceptar solicitudes HTTP y las cambia a HTTPS antes de que se realicen */
 function force_https_urls( $args, $url ) {
