@@ -558,7 +558,7 @@ add_action('init', function() {
 });
 
 /* Agregar la opción de order en las Categorias */
-function agregar_orden_categoria($tag) {
+/* function agregar_orden_categoria($tag) {
     $orden = get_term_meta($tag->term_id, 'orden', true);
     ?>
     <tr class="form-field">
@@ -570,18 +570,18 @@ function agregar_orden_categoria($tag) {
     <?php
 }
 add_action('category_edit_form_fields', 'agregar_orden_categoria');
-add_action('category_add_form_fields', 'agregar_orden_categoria');
+add_action('category_add_form_fields', 'agregar_orden_categoria'); */
 
-function guardar_orden_categoria($term_id) {
+/* function guardar_orden_categoria($term_id) {
     if (isset($_POST['orden'])) {
         update_term_meta($term_id, 'orden', sanitize_text_field($_POST['orden']));
     }
 }
 add_action('edited_category', 'guardar_orden_categoria');
-add_action('create_category', 'guardar_orden_categoria');
+add_action('create_category', 'guardar_orden_categoria'); */
 
 /* Ordenar en todo el sitio por el # de orden */
-function ordenar_categorias_wp($query) {
+/* function ordenar_categorias_wp($query) {
     if (is_admin() || !$query->is_main_query() || !$query->is_category()) {
         return;
     }
@@ -590,14 +590,14 @@ function ordenar_categorias_wp($query) {
     $query->set('orderby', 'meta_value_num');
     $query->set('order', 'ASC');
 }
-add_action('pre_get_posts', 'ordenar_categorias_wp');
+add_action('pre_get_posts', 'ordenar_categorias_wp'); */
 
 /* Ordenar en Categorias en la pagina de administrador */
-function ordenar_categorias_admin($query) {
+/* function ordenar_categorias_admin($query) {
     if (is_admin() && $query->query_vars['taxonomy'] === 'category') {
         $query->query_vars['meta_key'] = 'orden';
         $query->query_vars['orderby'] = 'meta_value_num';
         $query->query_vars['order'] = 'ASC';
     }
 }
-add_action('pre_get_terms', 'ordenar_categorias_admin');
+add_action('pre_get_terms', 'ordenar_categorias_admin'); */
